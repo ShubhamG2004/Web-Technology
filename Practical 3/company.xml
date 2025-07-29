@@ -21,16 +21,21 @@
         <employee id="E001">
             <name>Shubham Gavade</name>
             <position>Software Developer </position>
+            <salary>140000</salary>
             <email>shubham@gmail.com</email>
         </employee>
+
         <employee id="E002">
             <name>Sumit Gunale</name>
             <position>Prompt Engineer</position>
+            <salary>100000</salary>
             <email>sumit@gmail.com</email>
         </employee>
+        
         <employee id="E003">
             <name>Avishakar Kale</name>
             <position>AIML Engineer</position>
+            <salary>120000</salary>
             <email>avishakar@gmail.com</email>
         </employee>
     </employees>
