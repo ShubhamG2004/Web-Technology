@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+    <companyInfo>
+        <name>TCS</name>
+        <founded>1978</founded>
+        <industry>Software Development</industry>
+        <website>www.tcs.com</website>
+        <email>info@tcs.com</email>
+        <phone>9876543210</phone>
+    </companyInfo>
+    
+    <address>
+        <street>Hinjawadi</street>
+        <city>Pune</city>
+        <state>Maharashtra</state>
+        <zipCode>41004</zipCode>
+        <country>INDIA</country>
+    </address>
+    
+    <employees>
+        <employee id="E001">
+            <name>Shubham Gavade</name>
+            <position>Software Developer </position>
+            <email>shubham@gmail.com</email>
+        </employee>
+        <employee id="E002">
+            <name>Sumit Gunale</name>
+            <position>Prompt Engineer</position>
+            <email>sumit@gmail.com</email>
+        </employee>
+        <employee id="E003">
+            <name>Avishakar Kale</name>
+            <position>AIML Engineer</position>
+            <email>avishakar@gmail.com</email>
+        </employee>
+    </employees>
+    
+    <revenue currency="Rupees">2500000</revenue>
+    <employeeCount>1000</employeeCount>
+</company>
