@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Order Registration</title>
+  <style>
+	body { 
+	  font-family: system-ui, Arial, sans-serif; 
+	  margin: 0; 
+	  padding: 24px;
+	  background-color: #f5f5f5;
+	  min-height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	}
+	
+	h1 {
+	  color: #333;
+	  margin-bottom: 24px;
+	  text-align: center;
+	}
+	
+	form { 
+	  max-width: 450px; 
+	  width: 100%;
+	  padding: 32px; 
+	  background: white;
+	  border: 1px solid #ddd; 
+	  border-radius: 12px;
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	label { 
+	  display: block; 
+	  margin: 16px 0 8px; 
+	  font-weight: 500;
+	  color: #333;
+	}
+	
+	input, select { 
+	  width: 100%; 
+	  padding: 12px; 
+	  font-size: 16px;
+	  border: 1px solid #ccc;
+	  border-radius: 6px;
+	  box-sizing: border-box;
+	  transition: border-color 0.3s ease;
+	}
+	
+	input:focus, select:focus {
+	  outline: none;
+	  border-color: #007bff;
+	  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+	}
+	
+	button { 
+	  width: 100%;
+	  padding: 14px;
+	  margin-top: 20px; 
+	  font-size: 16px;
+	  font-weight: 600;
+	  color: white;
+	  background-color: #007bff;
+	  border: none;
+	  border-radius: 6px;
+	  cursor: pointer;
+	  transition: background-color 0.3s ease;
+	}
+	
+	button:hover {
+	  background-color: #0056b3;
+	}
+	
+	button:active {
+	  transform: translateY(1px);
+	}
+  </style>
+</head>
+<body>
+  <h1>Food Order Registration</h1>
+  <form action="register.php" method="post">
+
+	<label for="fullName">Full Name</label>
+	<input id="fullName" name="fullName" type="text" placeholder="e.g., Priya Sharma" required />
+	
+    
+	<label for="contactNumber">Contact Number</label>
+	<input
+	  id="contactNumber"
+	  name="contactNumber"
+	  type="tel"
+	  placeholder="e.g., +91 98765 43210"
+	  inputmode="tel"
+	  pattern="^\+?\d[\d\s\-]{7,}$"
+	  title="Enter a valid phone number (digits, spaces, dashes, optional +)"
+	  required
+	/>
+	
+	<label for="food">Select Food Item</label>
+	<select id="food" name="food" required>
+	  <option value="" disabled selected>— Choose one —</option>
+	  <option value="pizza">Pizza</option>
+	  <option value="burger">Burger</option>
+	  <option value="pasta">Pasta</option>
+	  <option value="biryani">Biryani</option>
+	  <option value="salad">Salad</option>
+	</select>
+	
+	<label for="quantity">Quantity</label>
+	<select id="quantity" name="quantity" required>
+	  <option value="" disabled selected>— Choose one —</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	</select>
+
+	<label for="payment">Payment Method</label>
+	<select id="payment" name="payment" required>
+	  <option value="" disabled selected>— Choose one —</option>
+	  <option value="cash">Cash on Delivery</option>
+	  <option value="card">Credit/Debit Card</option>
+	  <option value="upi">UPI</option>
+	</select>
+
+	<button type="submit">Register Order</button>
+
+  </form>
+</body>
+</html>
