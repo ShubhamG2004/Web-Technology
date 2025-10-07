@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="AuthApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AngularJS Registration/Login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="AuthController">
+
+  <div class="container">
+    <h2>{{ isLogin ? 'Login' : 'Register' }}</h2>
+
+    <!-- Registration Form -->
+    <form ng-if="!isLogin" ng-submit="register()">
+      <input type="text" ng-model="user.firstName" placeholder="First Name" required><br>
+      <input type="text" ng-model="user.lastName" placeholder="Last Name" required><br>
+      <input type="text" ng-model="user.username" placeholder="Username" required><br>
+      <input type="password" ng-model="user.password" placeholder="Password" required><br>
+      <button type="submit">Register</button>
+      <p class="switch" ng-click="toggleView()">Already have an account? Login</p>
+    </form>
+
+    <!-- Login Form -->
+    <form ng-if="isLogin" ng-submit="login()">
+      <input type="text" ng-model="loginData.username" placeholder="Username" required><br>
+      <input type="password" ng-model="loginData.password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+      <p class="switch" ng-click="toggleView()">Don't have an account? Register</p>
+    </form>
+
+    <p class="message">{{ message }}</p>
+  </div>
+
+</body>
+</html>
