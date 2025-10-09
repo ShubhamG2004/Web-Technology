@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gavade Cafe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{--accent:#d97706}
+    .hero{background:linear-gradient(90deg,rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;color:#fff}
+    .menu-card img{height:220px;object-fit:cover}
+    .gallery img{height:200px;object-fit:cover;width:100%}
+    .brand{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cup me-2" viewBox="0 0 16 16">
+          <path d="M2.5 1a.5.5 0 0 0 0 1h.638c.26 0 .505.146.63.382l.365.73A3.5 3.5 0 0 0 8 7.5V9H3a3 3 0 1 0 3 3v1a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a2 2 0 0 1 2-2h1.5z"/>
+        </svg>
+        <span class="fw-bold">Gavade Cafe</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero py-5">
+    <div class="container text-center py-5">
+      <h1 class="display-4 fw-bold">Gavade Cafe</h1>
+      <p class="lead mb-4">Handcrafted coffee, fresh pastries, a place to slow down.</p>
+      <a href="#menu" class="btn btn-warning btn-lg text-dark">Explore Our Menu</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="menu" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Menu Highlights</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 menu-card shadow-sm">
+              <img src="https://source.unsplash.com/600x400/?espresso" class="card-img-top" alt="Signature Coffee">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Signature Coffee</h5>
+                <p class="card-text">Single-origin espresso, balanced and aromatic.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <strong>$3.50</strong>
+                  <a class="btn btn-sm btn-outline-primary" href="#contact">Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 menu-card shadow-sm">
+              <img src="https://source.unsplash.com/600x400/?pastry" class="card-img-top" alt="Fresh Pastries">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Fresh Pastries</h5>
+                <p class="card-text">Daily-baked croissants, muffins and tarts.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <strong>$2.25</strong>
+                  <a class="btn btn-sm btn-outline-primary" href="#contact">Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 menu-card shadow-sm">
+              <img src="https://source.unsplash.com/600x400/?sandwich" class="card-img-top" alt="Light Bites">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Light Bites</h5>
+                <p class="card-text">Seasonal sandwiches and salads for a quick lunch.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <strong>$5.50</strong>
+                  <a class="btn btn-sm btn-outline-primary" href="#contact">Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Gallery</h2>
+        <div class="row g-3 gallery">
+          <div class="col-sm-6 col-md-3"><img src="https://source.unsplash.com/800x600/?coffee-cup" class="rounded" alt=""></div>
+          <div class="col-sm-6 col-md-3"><img src="https://source.unsplash.com/800x600/?cafe-interior" class="rounded" alt=""></div>
+          <div class="col-sm-6 col-md-3"><img src="https://source.unsplash.com/800x600/?barista" class="rounded" alt=""></div>
+          <div class="col-sm-6 col-md-3"><img src="https://source.unsplash.com/800x600/?pastry-bakery" class="rounded" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2>About Gavade Cafe</h2>
+            <p class="lead">We combine carefully-sourced beans, skilled baristas and a warm space to create a daily ritual for our guests.</p>
+            <ul class="list-unstyled">
+              <li>Locally roasted coffee</li>
+              <li>House-made pastries</li>
+              <li>Calm workspace & free Wi‑Fi</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <img src="https://source.unsplash.com/800x600/?coffee-shop" class="img-fluid rounded shadow-sm" alt="Gavade Cafe interior">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-dark text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Contact</h3>
+            <p>Visit us or send an order request.</p>
+            <address>
+              123 Cafe Street<br>
+              Your City, State 00000<br>
+              <a class="text-warning" href="tel:+1234567890">+1 (234) 567-890</a>
+            </address>
+          </div>
+          <div class="col-md-6">
+            <form class="row g-2" action="#" method="post">
+              <div class="col-12">
+                <input required name="name" type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="col-12">
+                <input required name="email" type="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="col-12">
+                <textarea required name="message" rows="4" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-warning text-dark">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-3 bg-secondary text-white">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>© <span class="fw-semibold">Gavade Cafe</span> 2025</div>
+      <div class="small">Open daily 7am–6pm</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
