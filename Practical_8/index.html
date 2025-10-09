@@ -6,35 +6,11 @@
   <title>Gavade Cafe</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    :root{
-      --accent:#d97706;
-      --muted:#6c757d;
-      --surface:#ffffff;
-    }
-    html,body{height:100%}
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial; padding-top:76px;background:#fafafa}
-    .navbar{backdrop-filter:blur(6px);background-color:rgba(17,24,39,0.65)!important}
-    .hero{background:linear-gradient(90deg,rgba(0,0,0,0.35),rgba(0,0,0,0.15)),url('img/interior.jpg') center/cover no-repeat;color:#fff;min-height:64vh;display:flex;align-items:center}
-    .hero .card{background:rgba(255,255,255,0.06);border:0}
-    .brand{color:var(--accent)}
-    .menu-card img{height:220px;object-fit:cover;border-radius:.5rem}
-    .card.hover-scale{transition:transform .28s cubic-bezier(.2,.9,.3,1),box-shadow .28s;will-change:transform}
-    .card.hover-scale:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 12px 30px rgba(2,6,23,0.12)}
-    .gallery img{height:200px;object-fit:cover;width:100%;transition:transform .28s ease;border-radius:.6rem}
-    .gallery img:hover{transform:scale(1.03)}
-    .btn-accent{background:var(--accent);border:0;color:#fff}
-    .rounded-lg{border-radius:1rem}
-    .reveal{opacity:0;transform:translateY(8px);animation:reveal .7s ease forwards}
-    .reveal-delay-1{animation-delay:.12s}
-    .reveal-delay-2{animation-delay:.24s}
-    .reveal-delay-3{animation-delay:.36s}
-    @keyframes reveal{to{opacity:1;transform:none}}
-    footer{background:#111827}
-    @media (max-width:767px){.hero{min-height:52vh}.menu-card img{height:180px}}
+    .object-fit-cover{object-fit:cover;height:100%;width:100%;}
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cup me-2" viewBox="0 0 16 16">
@@ -50,17 +26,38 @@
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <header class="hero py-5">
-    <div class="container text-center py-5">
-      <h1 class="display-4 fw-bold">Gavade Cafe</h1>
-      <p class="lead mb-4">Handcrafted coffee, fresh pastries, a place to slow down.</p>
-      <a href="#menu" class="btn btn-warning btn-lg text-dark">Explore Our Menu</a>
+  <header class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold">Gavade Cafe</h1>
+          <p class="lead text-muted">Handcrafted coffee, fresh pastries, a calm place to slow down and enjoy—now with local flavours.</p>
+          <p class="mb-4">
+            <a href="#menu" class="btn btn-warning btn-lg me-2">Our Menu</a>
+            <a href="#gallery" class="btn btn-outline-secondary btn-lg" data-bs-target="#galleryCarousel" data-bs-slide-to="0">Gallery</a>
+          </p>
+          <div class="d-flex gap-3">
+            <div class="text-muted small">
+              <strong>Open</strong>
+              <div>7am — 6pm</div>
+            </div>
+            <div class="text-muted small">
+              <strong>Phone</strong>
+              <div><a href="tel:+1234567890">+91 7057652014</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="ratio ratio-16x9 shadow-sm rounded-3 overflow-hidden">
+            <img src="img/interior.jpg" alt="Cafe interior" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -70,39 +67,39 @@
         <h2 class="text-center mb-4">Menu Highlights</h2>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card h-100 menu-card shadow-sm">
-              <img src="img/signuture_coffee.jpg" class="card-img-top" alt="Signature Coffee">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="img/signuture_coffee.jpg" class="card-img-top rounded-3" style="height:220px;object-fit:cover;" alt="Signature Coffee">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Signature Coffee</h5>
-                <p class="card-text">Single-origin espresso, balanced and aromatic.</p>
+                <p class="card-text text-muted">Single-origin espresso, balanced and aromatic.</p>
                 <div class="mt-auto d-flex justify-content-between align-items-center">
-                  <strong>₹120</strong>
+                  <strong class="text-dark">₹120</strong>
                   <a class="btn btn-sm btn-outline-primary" href="#contact">Order</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card h-100 menu-card shadow-sm">
-              <img src="img/fresh_pastries.jpg" class="card-img-top" alt="Fresh Pastries">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="img/fresh_pastries.jpg" class="card-img-top rounded-3" style="height:220px;object-fit:cover;" alt="Fresh Pastries">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Fresh Pastries</h5>
-                <p class="card-text">Daily-baked croissants, muffins and tarts.</p>
+                <p class="card-text text-muted">Daily-baked croissants, muffins and tarts.</p>
                 <div class="mt-auto d-flex justify-content-between align-items-center">
-                  <strong>₹80</strong>
+                  <strong class="text-dark">₹80</strong>
                   <a class="btn btn-sm btn-outline-primary" href="#contact">Order</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card h-100 menu-card shadow-sm">
-              <img src="img/light_bites.jpg" class="card-img-top" alt="Light Bites">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="img/light_bites.jpg" class="card-img-top rounded-3" style="height:220px;object-fit:cover;" alt="Light Bites">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Light Bites</h5>
-                <p class="card-text">Seasonal sandwiches and salads for a quick lunch.</p>
+                <p class="card-text text-muted">Seasonal sandwiches and salads for a quick lunch.</p>
                 <div class="mt-auto d-flex justify-content-between align-items-center">
-                  <strong>₹250</strong>
+                  <strong class="text-dark">₹250</strong>
                   <a class="btn btn-sm btn-outline-primary" href="#contact">Order</a>
                 </div>
               </div>
@@ -112,14 +109,38 @@
       </div>
     </section>
 
-    <section class="py-5 bg-light">
+    <section id="gallery" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-4">Gallery</h2>
-        <div class="row g-3 gallery">
-          <div class="col-sm-6 col-md-3"><img src="img/img1.jpg" class="rounded" alt=""></div>
-          <div class="col-sm-6 col-md-3"><img src="img/img2.jpg" class="rounded" alt=""></div>
-          <div class="col-sm-6 col-md-3"><img src="img/img3.jpg" class="rounded" alt=""></div>
-          <div class="col-sm-6 col-md-3"><img src="img/img4.jpg" class="rounded" alt=""></div>
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner rounded-3 overflow-hidden shadow-sm">
+            <div class="carousel-item active">
+              <img src="img/img1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/img2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/img3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/img4.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
@@ -143,37 +164,56 @@
       </div>
     </section>
 
-    <section id="contact" class="py-5 bg-dark text-light">
+    <section id="contact" class="py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <h3>Contact</h3>
-            <p>Visit us or send an order request.</p>
-            <address>
-              123 Cafe Street<br>
-              Your City, State 00000<br>
-              <a class="text-warning" href="tel:+1234567890">+1 (234) 567-890</a>
+          <div class="col-md-8">
+            <h3>Contact & Visit</h3>
+            <p class="text-muted">Come by for a cup or send us a message. Click below to open the quick contact form.</p>
+            <address class="mb-3">
+              Chandgad<br>
+             Kolhapur, Maharashtra 416509<br>
+              <a href="tel:+911234567890">+91 7057652014</a>
             </address>
           </div>
-          <div class="col-md-6">
-            <form class="row g-2" action="#" method="post">
-              <div class="col-12">
-                <input required name="name" type="text" class="form-control" placeholder="Your name">
-              </div>
-              <div class="col-12">
-                <input required name="email" type="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="col-12">
-                <textarea required name="message" rows="4" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="col-12 text-end">
-                <button type="submit" class="btn btn-warning text-dark">Send</button>
-              </div>
-            </form>
+          <div class="col-md-4 d-flex align-items-center">
+            <button type="button" class="btn btn-warning btn-lg w-100" data-bs-toggle="modal" data-bs-target="#contactModal">Send a Message</button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Send us a message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="post">
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input required name="name" type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input required name="email" type="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea required name="message" rows="4" class="form-control" placeholder="Message"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="py-3 bg-secondary text-white">
