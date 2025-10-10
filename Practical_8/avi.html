@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Avishkar Chai Store</title>
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			:root{
+				--brand-1: #6b3e26; /* chai brown */
+				--brand-2: #f6e7d8; /* warm cream */
+				--accent: #d97706; /* saffron accent */
+			}
+			body{
+				font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+				background: linear-gradient(180deg, #fffaf0 0%, #fff 60%);
+				color:#2c2c2c;
+			}
+			.navbar-brand strong{ color:var(--brand-1); }
+			.hero{
+				background: linear-gradient(135deg, rgba(107,62,38,0.06) 0%, rgba(217,119,6,0.03) 100%);
+				border-radius: .75rem;
+				padding: 3rem 2rem;
+			}
+			.chip{
+				background: var(--brand-2);
+				color: var(--brand-1);
+				padding: .25rem .6rem;
+				border-radius: 999px;
+				font-weight:600;
+				font-size:.85rem;
+			}
+			.card-price{
+				font-weight:700;
+				color:var(--brand-1);
+				font-size:1.05rem;
+			}
+			.flavor-pill{
+				background: rgba(107,62,38,0.08);
+				color:var(--brand-1);
+				padding:.18rem .5rem;
+				border-radius: .5rem;
+				font-size:.82rem;
+				margin-right:.35rem;
+			}
+			.footer{
+				background:#fbf7f2;
+				border-top:1px solid rgba(0,0,0,.05);
+			}
+			.feature-icon{
+				width:48px;height:48px;border-radius:12px;display:inline-grid;place-items:center;background:rgba(217,119,6,0.12);color:var(--accent);font-weight:700
+			}
+			@media (min-width:992px){
+				.hero{padding:4rem}
+			}
+		</style>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center" href="#">
+					<div class="me-2 chip">Avishkar</div>
+					<div>
+						<div style="line-height:1">Avishkar <strong>Chai</strong></div>
+						<small class="text-muted" style="font-size:.68rem">Fresh • Warm • Local</small>
+					</div>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navMenu">
+					<ul class="navbar-nav ms-auto align-items-lg-center">
+						<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+						<li class="nav-item ms-2"><a class="btn btn-outline-warning" href="#order" data-bs-toggle="modal">Order</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main class="container my-5">
+			<section class="hero mb-5">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<span class="chip">Premium Tea</span>
+						<h1 class="display-6 mt-3" style="font-weight:700">Avishkar Chai Store</h1>
+						<p class="text-muted">Handcrafted masala, classic adrak, and creamy kadak chai — brewed fresh to warm your day. Explore our menu and order for pickup or delivery.</p>
+						<div class="d-flex gap-2 mt-3">
+							<a class="btn btn-warning btn-lg" href="#menu">View Menu</a>
+							<a class="btn btn-outline-secondary btn-lg" href="#contact">Get in touch</a>
+						</div>
+						<div class="mt-4 d-flex gap-2 flex-wrap">
+							<div class="flavor-pill">Masala</div>
+							<div class="flavor-pill">Adrak</div>
+							<div class="flavor-pill">Elaichi</div>
+							<div class="flavor-pill">Cold Chai</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mt-4 mt-lg-0">
+						<div class="row g-3">
+							<div class="col-6">
+								<div class="card p-3 h-100 shadow-sm">
+									<div class="card-body text-center">
+										<div class="badge bg-light text-dark mb-2">Best Seller</div>
+										<h5 class="card-title mb-1" style="font-weight:700">Kadak Chai</h5>
+										<p class="text-muted small">Strong, bold, and full-bodied — the classic pick.</p>
+										<div class="card-price">₹40</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="card p-3 h-100 shadow-sm">
+									<div class="card-body text-center">
+										<div class="badge bg-light text-dark mb-2">New</div>
+										<h5 class="card-title mb-1" style="font-weight:700">Elaichi Chai</h5>
+										<p class="text-muted small">Aromatic cardamom notes for a fragrant experience.</p>
+										<div class="card-price">₹50</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="card p-3 h-100 shadow-sm">
+									<div class="card-body text-center">
+										<div class="badge bg-light text-dark mb-2">Signature</div>
+										<h5 class="card-title mb-1" style="font-weight:700">Masala Chai</h5>
+										<p class="text-muted small">Warm spices blended to the perfect balance.</p>
+										<div class="card-price">₹55</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="card p-3 h-100 shadow-sm">
+									<div class="card-body text-center">
+										<div class="badge bg-light text-dark mb-2">Iced</div>
+										<h5 class="card-title mb-1" style="font-weight:700">Cold Brew Chai</h5>
+										<p class="text-muted small">Chilled and refreshing with subtle spice.</p>
+										<div class="card-price">₹65</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="menu" class="mb-5">
+				<div class="d-flex justify-content-between align-items-center mb-3">
+					<h2 class="h4 mb-0">Our Menu</h2>
+					<small class="text-muted">All prices in INR</small>
+				</div>
+				<div class="row g-4">
+					<!-- Product card -->
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 shadow-sm">
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Masala Chai</h5>
+									<div class="card-price">₹55</div>
+								</div>
+								<p class="text-muted small mb-3">Rich blend of spices, milk, and brewed tea.</p>
+								<div class="mt-auto d-flex gap-2">
+									<button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#nutritionModal">Details</button>
+									<button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Masala Chai" data-price="55">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 shadow-sm">
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Adrak Chai</h5>
+									<div class="card-price">₹45</div>
+								</div>
+								<p class="text-muted small mb-3">Ginger-forward, warming and invigorating.</p>
+								<div class="mt-auto d-flex gap-2">
+									<button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#nutritionModal">Details</button>
+									<button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Adrak Chai" data-price="45">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 shadow-sm">
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Elaichi Chai</h5>
+									<div class="card-price">₹50</div>
+								</div>
+								<p class="text-muted small mb-3">Fragrant cardamom infusion with smooth milk.</p>
+								<div class="mt-auto d-flex gap-2">
+									<button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#nutritionModal">Details</button>
+									<button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Elaichi Chai" data-price="50">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 shadow-sm">
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Cold Brew Chai</h5>
+									<div class="card-price">₹65</div>
+								</div>
+								<p class="text-muted small mb-3">Slow-brewed and chilled for a smooth taste.</p>
+								<div class="mt-auto d-flex gap-2">
+									<button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#nutritionModal">Details</button>
+									<button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Cold Brew Chai" data-price="65">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 shadow-sm">
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Chocolate Chai</h5>
+									<div class="card-price">₹70</div>
+								</div>
+								<p class="text-muted small mb-3">A comforting mix of cocoa and spice.</p>
+								<div class="mt-auto d-flex gap-2">
+									<button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#nutritionModal">Details</button>
+									<button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Chocolate Chai" data-price="70">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 shadow-sm">
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start mb-2">
+									<h5 class="card-title mb-0">Herbal Infusion</h5>
+									<div class="card-price">₹60</div>
+								</div>
+								<p class="text-muted small mb-3">Caffeine-free blend to relax and unwind.</p>
+								<div class="mt-auto d-flex gap-2">
+									<button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#nutritionModal">Details</button>
+									<button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal" data-item="Herbal Infusion" data-price="60">Order</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section id="about" class="mb-5">
+				<div class="row align-items-center gx-5">
+					<div class="col-md-6">
+						<h3 class="h5">About Avishkar Chai</h3>
+						<p class="text-muted">We are a small batch chai maker dedicated to creating consistent, flavorful tea using locally-sourced leaves and traditional spice blends. Our focus is freshness and simplicity — nothing artificial, just good chai.</p>
+						<ul class="list-unstyled">
+							<li class="d-flex align-items-start mb-2"><div class="me-3 feature-icon">T</div><div><strong>Traditional</strong><div class="text-muted small">Recipes passed down and tuned for modern taste.</div></div></li>
+							<li class="d-flex align-items-start mb-2"><div class="me-3 feature-icon">F</div><div><strong>Fresh</strong><div class="text-muted small">Prepared daily in small quantities.</div></div></li>
+							<li class="d-flex align-items-start"><div class="me-3 feature-icon">C</div><div><strong>Convenient</strong><div class="text-muted small">Pickup and local delivery available.</div></div></li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<div class="p-4 bg-white rounded shadow-sm">
+							<h6 class="mb-2">Hours</h6>
+							<p class="mb-1"><strong>Mon–Fri:</strong> 7:00 — 18:00</p>
+							<p class="mb-1"><strong>Sat–Sun:</strong> 8:00 — 16:00</p>
+							<hr>
+							<h6 class="mb-2">Address</h6>
+							<p class="small text-muted mb-0">Local Market Road, Near Central Plaza</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="mb-5">
+				<div class="row">
+					<div class="col-lg-6">
+						<h3 class="h5">Get in touch</h3>
+						<p class="text-muted small">Questions, feedback, or catering inquiries — send us a message.</p>
+						<form id="contactForm" class="needs-validation" novalidate>
+							<div class="mb-3">
+								<label class="form-label">Name</label>
+								<input type="text" class="form-control" required>
+								<div class="invalid-feedback">Please enter your name.</div>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Email</label>
+								<input type="email" class="form-control" required>
+								<div class="invalid-feedback">Please enter a valid email.</div>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Message</label>
+								<textarea class="form-control" rows="4" required></textarea>
+								<div class="invalid-feedback">Please write a message.</div>
+							</div>
+							<button class="btn btn-primary">Send message</button>
+						</form>
+					</div>
+					<div class="col-lg-6 mt-4 mt-lg-0">
+						<div class="p-4 bg-white rounded shadow-sm">
+							<h6>Contact</h6>
+							<p class="mb-1"><strong>Phone:</strong> +91 90000 00000</p>
+							<p class="mb-1"><strong>Email:</strong> hello@avishkarchai.example</p>
+							<p class="small text-muted mt-3">We reply within one business day.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer py-4">
+			<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+				<div class="text-muted small">© Avishkar Chai Store • Crafted with care</div>
+				<div class="mt-2 mt-md-0">
+					<a class="text-muted me-3" href="#">Privacy</a>
+					<a class="text-muted" href="#">Terms</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Order Modal -->
+		<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Place order</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<form id="orderForm" class="needs-validation" novalidate>
+							<div class="mb-3">
+								<label class="form-label">Item</label>
+								<input type="text" class="form-control" id="orderItem" readonly>
+							</div>
+							<div class="mb-3 row">
+								<div class="col-6">
+									<label class="form-label">Price</label>
+									<input type="text" class="form-control" id="orderPrice" readonly>
+								</div>
+								<div class="col-6">
+									<label class="form-label">Qty</label>
+									<input type="number" class="form-control" id="orderQty" value="1" min="1" required>
+									<div class="invalid-feedback">Enter quantity.</div>
+								</div>
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Name</label>
+								<input type="text" class="form-control" id="custName" required>
+								<div class="invalid-feedback">Required</div>
+							</div>
+							<div class="d-flex justify-content-end">
+								<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-warning">Confirm</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nutrition / Details Modal -->
+		<div class="modal fade" id="nutritionModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Item details</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<p class="mb-1"><strong>Serving:</strong> 200–300ml</p>
+						<p class="mb-1"><strong>Ingredients:</strong> Tea leaves, milk, sugar, spices (varies by item)</p>
+						<p class="text-muted small mb-0">Our chai is made fresh. Please request less sugar or alternative milk options when ordering.</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			// Simple order modal wiring
+			const orderModal = document.getElementById('orderModal')
+			orderModal.addEventListener('show.bs.modal', function (event) {
+				const button = event.relatedTarget
+				const item = button.getAttribute('data-item') || ''
+				const price = button.getAttribute('data-price') || ''
+				document.getElementById('orderItem').value = item
+				document.getElementById('orderPrice').value = price
+				document.getElementById('orderQty').value = 1
+			})
+
+			// Form validation
+			(() => {
+				'use strict'
+				const forms = document.querySelectorAll('.needs-validation')
+				Array.from(forms).forEach(form => {
+					form.addEventListener('submit', event => {
+						if (!form.checkValidity()) {
+							event.preventDefault()
+							event.stopPropagation()
+						} else {
+							// Fake success behaviour for demo
+							event.preventDefault()
+							const modal = bootstrap.Modal.getInstance(orderModal)
+							if (modal) modal.hide()
+							alert('Thank you — your request was received (demo).')
+							form.reset()
+						}
+						form.classList.add('was-validated')
+					}, false)
+				})
+			})()
+		</script>
+	</body>
+</html>
