@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Abhijeet Book Store — Front Page</title>
+    <title>Anuj Book Store — Front Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
       body { padding-top: 70px; }
@@ -14,7 +14,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Abhijeet Book Store</a>
+        <a class="navbar-brand" href="#">Anuj Book Store</a>
         <div class="d-flex ms-auto align-items-center text-white">
           <div class="me-3">Favorites: <span id="favCount" class="badge bg-light text-primary">0</span></div>
         </div>
@@ -23,7 +23,7 @@
 
     <header class="hero py-5 text-center">
       <div class="container">
-        <h1 class="display-6">Abhijeet Book Store</h1>
+        <h1 class="display-6">Anuj Book Store</h1>
         <p class="text-muted">Simple front page — search books and mark favorites.</p>
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -44,7 +44,7 @@
     </main>
 
     <footer class="py-4 bg-light text-center">
-      <div class="container text-muted">© 2025 Abhijeet Book Store — Simple Front Page</div>
+      <div class="container text-muted">© 2025 Anuj Book Store — Simple Front Page</div>
     </footer>
 
     <script>
@@ -65,11 +65,11 @@
       // Load favorites from localStorage (store as array of ids)
       function loadFavs(){
         try{
-          const raw = localStorage.getItem('abhijeet_favs');
+          const raw = localStorage.getItem('Anuj_favs');
           return raw ? JSON.parse(raw) : [];
         } catch(e){ return []; }
       }
-      function saveFavs(arr){ localStorage.setItem('abhijeet_favs', JSON.stringify(arr)); }
+      function saveFavs(arr){ localStorage.setItem('Anuj_favs', JSON.stringify(arr)); }
 
       let favs = loadFavs();
 
