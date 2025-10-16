@@ -1,4 +1,3 @@
-// Student Management System with Enhanced Functionality
 const studentForm = document.getElementById('studentForm');
 const studentTable = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
 const submitBtn = document.getElementById('submitBtn');
@@ -17,14 +16,12 @@ const closeModal = document.querySelector('.close');
 const pageSizeSelect = document.getElementById('pageSize');
 const formTitle = document.getElementById('formTitle');
 
-// Pagination variables
 let currentPage = 1;
 let pageSize = 10;
 let filteredStudents = [];
 let sortColumn = '';
 let sortDirection = 'asc';
 
-// Local Storage Functions
 function getStudents() {
     return JSON.parse(localStorage.getItem('students') || '[]');
 }
@@ -33,7 +30,6 @@ function saveStudents(students) {
     localStorage.setItem('students', JSON.stringify(students));
 }
 
-// Initialize with sample data if empty
 function initializeSampleData() {
     const students = getStudents();
     if (students.length === 0) {
@@ -73,7 +69,6 @@ function initializeSampleData() {
     }
 }
 
-// Update Statistics
 function updateStatistics() {
     const students = getStudents();
     const totalStudents = students.length;
