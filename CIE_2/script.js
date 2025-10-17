@@ -97,7 +97,6 @@ function populateCourseFilter() {
     });
 }
 
-// Filter and Search Students
 function filterStudents() {
     const students = getStudents();
     const searchTerm = searchInput.value.toLowerCase();
@@ -124,7 +123,6 @@ function filterStudents() {
     renderPagination();
 }
 
-// Sort Students
 function sortStudents(column) {
     if (sortColumn === column) {
         sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
