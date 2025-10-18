@@ -134,8 +134,6 @@ function sortStudents(column) {
     filteredStudents.sort((a, b) => {
         let aVal = a[column] || '';
         let bVal = b[column] || '';
-
-        // Handle numeric sorting for GPA and year
         if (column === 'gpa' || column === 'year') {
             aVal = parseFloat(aVal) || 0;
             bVal = parseFloat(bVal) || 0;
